@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Что такое ФП? И почему оно необходимо каждому программисту?</title>
+  <link rel="stylesheet" href="components/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="components/reveal.js/css/theme/serif.css">
+  <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Что такое ФП?</h2>
+        <h3>И почему оно необходимо каждому программисту?</h3>
+        <div style="height: 3em;">
+          <!--<img src="images/logos.png"
+            style="border: 0px; width: 33%; background: none; box-shadow: none; margin: 0 0 20px 0">
+            -->
+        </div>
+        <h3>Роман Смирнов</h3>
+        <h4>Системный архитектор @<a href="https://convead.ru" target="_blank">Convead</a></h4>
+        <h4>Основатель проекта <a href="https://speekify.com" target="_blank">Speekify</a></h4>
+        <h4><i class="fa fa-github fa-margin"></i><a href="https://github.com/romul" target="_blank">romul</a></h4>
+      </section>
+      <section>
+        <h2>Что такое ФП?</h2>
+        <br />
+        <div class="fragment">
+          <ul>
+            <li>
+              <h3>Функциональное программирование</h3>
+            </li>
+          </ul>
+        </div>
+        <div class="fragment">
+          <ul>
+            <li>
+              <h3>Функциональное проектирование</h3>
+            </li>
+          </ul>
+        </div>
+        <div class="fragment">
+          <ul>
+            <li>
+              <h3>Функциональная парадигма</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h3>Функциональное программирование</h3>
+        <ul>
+          <li>Функции высшего порядка / функции — объекты первого класса (значения)</li>
+          <li>Каррирование / частичное применение</li>
+          <li>Замыкания</li>
+          <li>Рекурсия</li>
+          <li>Reduce (fold) -> map, filter, count, reverse, append, etc.</li>
+          <li>Pattern-matching</li>
+          <li>Неизменяемость данных</li>
+          <li>Чистые функции</li>
+          <li>Изоляция сайд-эффектов (монады, акторы)</li>
+        </ul>
+      </section>
+      <!--<section>
+        <h3>Функциональное программирование</h3>
+        <ul>
+          <li><strong><em>Functions &mdash; first-class citizens (HOF)</em></strong></li>
+          <li>Currying / <strong>Partial application</strong></li>
+          <li><strong>Сlosures</strong></li>
+          <li><strong>Recursion</strong></li>
+          <li><strong>Reduce (fold) -> map, filter, count, reverse, append, etc.</strong></li>
+          <li><strong><em>Pattern-matching</em></strong></li>
+          <li>Immutable data</li>
+          <li>Pure functions => TDD</li>
+          <li>Side-effects isolation (monads, actors) => TDD</li>
+        </ul>
+      </section>-->
+      <section>
+        <h3>Функциональное проектирование</h3>
+        <blockquote class="fragment" style="width:100%; font-size: 95%">Любой объект служит лишь материальным носителем
+          функции, т.e. функция — первична, объект — вторичен и создается по причине невозможности иными,
+          нематериальными средствами удовлетворить потребности людей.</blockquote>
+        <blockquote class="fragment" style="width:100%; font-size: 95%">Например, автомобиль нужен для перевозки грузов
+          и людей (функция — перемещать в пространстве, создан вследствие нереальности перемещения предметов только
+          усилием мысли).
+        </blockquote>
+        <div class="fragment">
+          <blockquote style="width:100%; font-size: 95%">Выполнение требуемой функции — главная цель и основа разработки
+            объекта.
+          </blockquote>
+          <p>© Wikipedia</p>
+        </div>
+      </section>
+      <section>
+        <h3>Функциональное проектирование</h3>
+        <p>Программа &mdash; набор функций, которые необходимы пользователю.</p>
+        <p><strong>Входные данные</strong> &mdash; пользовательский ввод или из внешнего источника.</p>
+        <p><strong>Результат</strong> передаётся пользователю и/или сохраняется в хранилище.</p>
+      </section>
+      <section>
+        <h2>ФП vs ООП</h2>
+      </section>
+      <section>
+        <h2>ФП <s style="color: #D33">vs</s><span style="color: #3B3">&amp;</span> ООП</h2>
+        <div class="fragment">
+          <h3>Что такое объект?</h3>
+          <ol>
+            <li>
+              <h4>данные и все возможные действия над ними</h4>
+            </li>
+            <li>
+              <h4>«должностная инструкция» (что нужно делать) и необходимые для этого данные</h4>
+            </li>
+          </ol>
+        </div>
+        <p class="fragment">Паттерны объектно-ориентированного проектирования за второй вариант!</p>
+        <p class="fragment">Подумал про поведенческие паттерны?</p>
+        <p class="fragment">Да, но не только они!</p>
+      </section>
+      <section>
+        <h3>Паттерны проектирования</h3>
+        <p>В описании паттерна всегда есть раздел «Назначение»</p>
+        <div class="fragment">
+          <h4>Примеры:</h4>
+          <ul>
+            <li><strong>Adapter</strong> &mdash; предоставить подходящий интерфейс, не изменяя существующий.</li>
+            <li><strong>Composite</strong> &mdash; унифицировать доступ к отдельным объектам и к группам объектов.
+            </li>
+            <li><strong>Decorator</strong> &mdash; расширить функциональность объекта без определения подклассов.</li>
+            <li><strong>Facade</strong> &mdash; обеспечить унифицированный интерфейс с набором разрозненных реализаций
+              или интерфейсов.</li>
+            <li><strong>Builder</strong> &mdash; отделить конструирование сложного объекта от его представления.</li>
+          </ul>
+        </div>
+      </section>
+      <!--<section>
+        <h3>Что такое «объект» в рамках ФП?</h3>
+        <div class="fragment">
+          <h4>Замыкание или частично примененная функция высшего порядка</h4>
+        </div>
+      </section>-->
+      <section>
+        <h3>SOLID &mdash; адаптация ФП для ООЯП</h3>
+        <ul class="fragment">
+          <li>SRP: исходя из понятия функция, она должна иметь только одну ответственность и один повод для изменений
+          </li>
+          <li>OCP: HOF всегда открыты для расширения, но закрыты для модификации. Иммутабельность реализует OCP на
+            уровне данных.</li>
+          <li>LSP: Композиция функций. Функцию f(b: B) можно вызвать для любого типа S, имеющего однозначное
+            преобразование g(s: S) -> B.</li>
+          <li>ISP: Идеальный интерфейс &mdash; 1 функция (сигнатура)</li>
+          <li>DIP: HOF + частичное применение функций <br />=&gt; функция со встроенными зависимостями</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Функциональная парадигма</h3>
+        <h4>Парадигма программирования — это совокупность идей и понятий, определяющих стиль написания компьютерных
+          программ.</h4>
+        <ul class="fragment">
+          <li>Композиция функций вместо последовательности инструкций</li>
+          <li>Как именно выполняются вычисления &mdash; детали реализации</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Функциональная парадигма</h3>
+        <h4>Весь процесс работы программы подобен нескольким конвейерным линиям.</h4>
+        <img src="images/conveyer.jpg" style="border: 0px; width: 55%;" />
+      </section>
+      <section>
+        <h2>Спасибо за внимание!</h2>
+        <div class="fragment">
+          <br /><br /><br />
+          <h3>Вопросы?</h3>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="components/headjs/dist/1.0.0/head.min.js"></script>
+  <script src="components/reveal.js/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // link(rel="stylesheet" href="components/reveal.js/css/print/pdf.css")
+
+      dependencies: [
+        { src: 'components/reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'components/reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: 'components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: 'components/reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+</body>
+
+</html>
