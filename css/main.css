@@ -47,3 +47,12 @@
 .reveal section img {
   margin: 0;
 }
+
+table.valign-middle th {
+  text-align: center;
+  border: 1px solid #555 !important;
+}
+table.valign-middle td {
+  vertical-align: middle;
+  border: 1px solid #555 !important;
+}
