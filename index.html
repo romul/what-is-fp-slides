@@ -74,7 +74,8 @@
             <th>ФП в мейнстрим-языках</th>
           </tr>
           <tr>
-            <td>Функции высшего порядка /<br />функции&nbsp;—&nbsp;объекты&nbsp;первого&nbsp;класса&nbsp;(значения)</td>
+            <td>Функции высшего порядка (HOF) /<br />
+              функции&nbsp;—&nbsp;объекты&nbsp;первого&nbsp;класса&nbsp;(значения)</td>
             <td rowspan="3">Есть поддержка лямбда-функций,<br />но метод != лямбда-функция</td>
           </tr>
           <tr>
@@ -107,20 +108,6 @@
           </tr>
         </table>
       </section>
-      <!--<section>
-        <h3>Функциональное программирование</h3>
-        <ul>
-          <li><strong><em>Functions &mdash; first-class citizens (HOF)</em></strong></li>
-          <li>Currying / <strong>Partial application</strong></li>
-          <li><strong>Сlosures</strong></li>
-          <li><strong>Recursion</strong></li>
-          <li><strong>Reduce (fold) -> map, filter, count, reverse, append, etc.</strong></li>
-          <li><strong><em>Pattern-matching</em></strong></li>
-          <li>Immutable data</li>
-          <li>Pure functions => TDD</li>
-          <li>Side-effects isolation (monads, actors) => TDD</li>
-        </ul>
-      </section>-->
       <section>
         <h3>Функциональное проектирование</h3>
         <div class="fragment">
@@ -189,15 +176,24 @@
       </section>-->
       <section>
         <h3>SOLID &mdash; адаптация ФП для ООЯП</h3>
-        <ul class="fragment">
-          <li>SRP: исходя из понятия функция, она должна иметь только одну ответственность и один повод для изменений
+        <ul style="font-size: 90%">
+          <li class="fragment"><strong>Single Responsibility Principle:</strong><br />Исходя из понятия функция, она
+            должна иметь только
+            одну ответственность и один повод для изменений
           </li>
-          <li>OCP: HOF всегда открыты для расширения, но закрыты для модификации. Иммутабельность реализует OCP на
-            уровне данных.</li>
-          <li>LSP: Композиция функций. Функцию f(b: B) можно вызвать для любого типа S, имеющего однозначное
-            преобразование g(s: S) -> B.</li>
-          <li>ISP: Идеальный интерфейс &mdash; 1 функция (сигнатура)</li>
-          <li>DIP: HOF + частичное применение функций <br />=&gt; функция со встроенными зависимостями</li>
+          <li class="fragment"><strong>Open Closed Principle:</strong><br />
+            HOF всегда открыты для расширения, но закрыты для модификации.
+            Иммутабельность реализует OCP на уровне данных.</li>
+          <li class="fragment"><strong>Liskov Substitution Principle:</strong> <br />Композиция функций.
+            Функцию f(b: B) можно вызвать для любого типа S, имеющего однозначное преобразование g(s: S) -> B.</li>
+          <li class="fragment"><strong>Interface Segregation Principle:</strong><br />Идеальный интерфейс &mdash; 1
+            функция (сигнатура)
+          </li>
+          <li class="fragment"><strong>Dependency Inversion Principle:</strong><br />
+            &laquo;Абстракции не&nbsp;должны зависеть от&nbsp;деталей&raquo;&nbsp;&mdash; одна из&nbsp;базовых
+            идей&nbsp;ФП.<br />
+            Частичное применение HOF =&gt; функция со встроенными зависимостями.
+          </li>
         </ul>
       </section>
       <section>
@@ -205,20 +201,43 @@
         <h4>Парадигма программирования — это совокупность идей и понятий, определяющих стиль написания компьютерных
           программ.</h4>
         <ul class="fragment">
-          <li>Композиция функций вместо последовательности инструкций</li>
-          <li>Как именно выполняются вычисления &mdash; детали реализации</li>
+          <li>Композиция функций вместо последовательности инструкций.</li>
+          <li>Как именно выполняются вычисления &mdash; детали реализации.<br />
+            Абстракции не&nbsp;должны зависеть от&nbsp;деталей.
+          </li>
         </ul>
       </section>
       <section>
         <h3>Функциональная парадигма</h3>
-        <h4>Весь процесс работы программы подобен нескольким конвейерным линиям.</h4>
+        <h4>Весь процесс работы программы подобен нескольким конвейерным линиям по обработке данных.</h4>
         <img src="images/conveyer.jpg" style="border: 0px; width: 55%;" />
+      </section>
+      <section>
+        <h3>Что дальше?</h3>
+        <ul>
+          <li class="fragment">Изучите хотя бы 1 функциональный язык, чисто для себя;</li>
+          <li class="fragment">Расширяйте границы, посмотрите, как реализуется ООП в функциональных языках;</li>
+          <li class="fragment">Применяйте функциональные подходы совместно с ООП, чтобы получить более объёмную картину
+            и более выразительный код.</li>
+        </ul>
       </section>
       <section>
         <h2>Спасибо за внимание!</h2>
         <div class="fragment">
-          <br /><br /><br />
           <h3>Вопросы?</h3>
+          <br /><br /><br />
+          <div style="font-family: Monaco, 'Courier New'; font-size: 120%; text-align: left;">
+            <p>Роман Смирнов</p>
+            <p>
+              <i class="fa fa-github fa-margin"></i><a href="https://github.com/romul" target="_blank">romul</a><br />
+              <i class="fa fa-facebook-square fa-margin"></i><a href="https://www.facebook.com/rf.smirnov"
+                target="_blank">rf.smirnov</a>
+            </p>
+            <p>
+              Слайды: <a
+                href="https://romul.github.io/what-is-fp-slides/">https://romul.github.io/what-is-fp-slides/</a>
+            </p>
+          </div>
         </div>
       </section>
     </div>
